@@ -1,0 +1,223 @@
+[{
+  "name": "env.g0v.tw",
+  "name_zh": "台灣環境儀表板",
+  "status": "Alpha",
+  "tags": [
+    "environment",
+    "air quality"
+  ],
+  "license": "CC0-1.0",
+  "author": "clkao",
+  "description": "Taiwan environment dashboard",
+  "description_zh": "台灣環境儀表板",
+
+  "homepage": "http://env.g0v.tw/",
+  "document": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0v/env.g0v.tw"
+  },
+
+  "audience": [
+    "developer"
+  ],
+  "products": [
+    "data",
+    "demosite"
+  ],
+  "projects": [
+    "visualization"
+  ],
+  "contributors": [
+    "clkao",
+    "zbryikt",
+    "ttcat",
+    "audreyt",
+    "dannvix",
+    "yllan",
+    "MIND0S",
+    "yhsiang"
+  ],
+  "needs": [
+    "programmer",
+    "designer"
+  ]
+},
+{
+  "name": "ivod.ly",
+  "name_zh": "立院影城",
+  "status": "Alpha",
+  "tags": [
+    "angularjs",
+    "livescript",
+    "sass",
+    "bootstrap",
+    "ly",
+    "ivod",
+    "cinema"
+  ],
+  "license": "MIT",
+  "author": "clkao",
+  "description": "ivod.ly",
+  "description_zh": "互動式線上即時轉播立院院會會議過程",
+  "homepage": "http://ivod.ly.g0v.tw/",
+  "document": "https://g0v.hackpad.com/g1v-work-items-ewwARXN8iyi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0v/ivod.ly.g0v.tw"
+  },
+  "audience": [
+    "public"
+  ],
+  "products": [
+    "website"
+  ],
+  "projects": [
+    "meta"
+  ],
+  "contributors": [
+    "clkao",
+    "yhsiang",
+    "zbryikt",
+    "ETBlue",
+    "audreyt",
+    "AliceWei",
+    "s89008",
+    "walkingice",
+    "billy3321"
+  ],
+  "needs": [
+    "designer"
+  ]
+},
+{
+  "name": "ly.g0v.tw",
+  "name_zh": "國會大代誌",
+  "status": "Alpha",
+  "tags": [
+    "angularjs",
+    "livescript",
+    "stylus",
+    "bootstrap",
+    "ly",
+    "legislator",
+    "ivod"
+  ],
+  "license": "MIT",
+  "author": "clkao",
+  "description": "ly.g0v.tw",
+  "description_zh": "揭露立法院資訊、立委質詢、立院院會議程、法案審理等等",
+  "homepage": "http://ly.g0v.tw/",
+  "document": "https://g0v.hackpad.com/g0v--QotRfHFRwF5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0v/ly.g0v.tw"
+  },
+  "audience": [
+    "public"
+  ],
+  "products": [
+    "website"
+  ],
+  "projects": [
+    "ly"
+  ],
+  "contributors": [
+    "clkao",
+    "yhsiang",
+    "walkingice",
+    "victorhsieh",
+    "ethantw",
+    "chilijung",
+    "jimyhuang",
+    "zbryikt",
+    "ETBlue",
+    "AliceWei",
+    "lyanchih"
+  ],
+  "needs": [
+    "designer"
+  ]
+},
+{
+  "name": "twbudget",
+  "name_zh": "中央政府總預算",
+  "status": "Alpha",
+  "tags": [
+    "angularjs",
+    "livescript",
+    "sass",
+    "bootstrap"
+  ],
+  "licenses": "MIT",
+  "author": "clkao",
+  "contributors": [
+    "zbryikt",
+    "CA",
+    "jeffhung",
+    "ipa"
+  ],
+  "description": "Taiwan Central Government Budget",
+  "description_zh": "中央政府總預算視覺化",
+  "homepage": "http://budget.g0v.tw/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0v/twbudget"
+  },
+  "audience": [
+    "public"
+  ],
+  "products": [
+    "website"
+  ],
+  "projects": [
+    "budget"
+  ],
+  "thumbnail": "https://raw.github.com/g0v/twbudget/master/thumbnail.png",
+  "needs": [
+    "designer",
+    "programmer",
+    "writer"
+  ]
+},
+{
+    "name": "twly-voter-guide",
+    "name_zh": "立委投票指南",
+    "status": "Alpha",
+    "tags": [
+        "twly",
+        "legislator",
+        "Django",
+        "python"
+    ],
+    "license": "CC0-1.0",
+    "author": "thewayiam",
+    "description": "Taiwan Legislators Voter Guide",
+    "description_zh": "立委投票指南",
+    "homepage": "http://vote.ly.g0v.tw/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/g0v/twly-voter-guide"
+    },
+    "audience": [
+        "public"
+    ],
+    "products": [
+        "website", "api" 
+    ],
+    "projects": [
+        "twly-voter-guide",
+        "twly_crawler"
+    ],
+    "contributors": [
+        "wildjcrt",
+        "yhsiang",
+        "audreyt",
+        "thewayiam"
+    ],
+    "needs": [
+        "writer",
+        "programmer",
+        "designer"
+    ]
+}]

@@ -1,0 +1,40 @@
+{
+  "author": "imet",
+  "status": "production",
+  "name": "NoMoreSilence",
+  "description": "NoMoreSilence: a website that propagates an incident about sexual violation taking place in a school of special education",
+  "description_zh": "NoMoreSilence: 一個讓大眾得知南部某特教學校集體性侵案件、並推廣相關國賠連署的網站",
+  "homepage": "http://nomoresilence.herokuapp.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imet3/NoMoreSilence"
+  },
+  "licenses": [
+    {
+      "type": "CCA 3.0 license (html5up.net/license)"
+    }
+  ],
+  "keywords": [
+    "education",
+    "special education",
+    "sexual violation",
+    "educational system",
+    "state compensation"
+  ],
+  "audience": [
+    "public"
+  ],
+  "products": [
+    "http://nomoresilence.herokuapp.com"
+  ],
+  "projects": [
+    "NoMoreSilence"
+  ],
+  "contributors": [
+    "imet"
+  ],
+  "needs": [
+    "reporter",
+    "public awareness"
+  ]
+}

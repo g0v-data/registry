@@ -1,0 +1,52 @@
+{
+  "author": "APP4AM team",
+  "status": "pre-alpha",
+  "name": "APP4AM",
+  "name_zh" :"全民除黴計畫 APP4AM",
+  "description_zh": "計畫縮寫中的4AM取自太陽花學運中聶永真大師設計的國外板廣告標語，在這裡作為APP For Anti-Mould，意即「除黴專用APP」，希望能成為傳續運動能量的一份子，並跳脫政治光譜的意識之爭，以媒體改革的角度切入，期許未來不論立場的人，都能因為較正確揭露資訊的新聞而可以心平氣合的討論各種議題，不需要再因為媒體的誤導和煽動而讓社會動盪。",
+  "homepage": "https://www.facebook.com/app4am?fref=ts",
+  "document": "https://g0v.hackpad.com/APP4AM-0.5-YGd0FvMp9Vr#:h=WHAT?-(這是什麼專案)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cecol/APP4AM-Project"
+  },
+  "licenses": [
+    {
+      "type": "CC0"
+    }
+  ],
+  "keywords": [
+    "Newspaper",
+    "Supervise",
+    "APP",
+    "scala",
+    "Meteor",
+    "News crawler"
+  ],
+  "audience": [
+    "public"
+  ],
+  "products": [
+    "website",
+    "app"
+  ],
+  "projects": [
+    "Supervise"
+  ],
+  "contributors": [
+    "Rhozan",
+    "Wilber",
+    "Wei Yu Chen",
+    "Michael Li",
+    "mrbigmouth",
+    "s5y",
+    "Carol"
+  ],
+  "needs": [
+    "designer",
+    "writer",
+    "money",
+    "server machine",
+    "news analyst"
+  ]
+}

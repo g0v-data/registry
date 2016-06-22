@@ -1,0 +1,37 @@
+{
+  "author": "iapyeh",
+  "status": "alpha",
+  "name": "表燈計算機",
+  "description": "billcalcute: Bill calculator for users of Taiwan Power Company",
+  "description_zh": "billcalute: 「時間電價表燈」電費計算機",
+  "homepage": "http://billculate.appspot.com/htdocs/index.html",
+  "document": "http://billculate.appspot.com/htdocs/intro.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iapyeh/billcalcute"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "keywords": [
+    "calculator",
+    "bill",
+    "taiwan",
+    "taiwan power company"
+  ],
+  "audience": [
+    "contributor"
+  ],
+  "products": [
+    "website"
+  ],
+  "projects": [
+  ],
+  "contributors": [
+    "iapyeh"
+  ],
+  "needs": [
+  ]
+}

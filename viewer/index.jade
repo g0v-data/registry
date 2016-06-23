@@ -79,5 +79,10 @@ html(lang="en")
 
       .entries
         .entry(ng-repeat="item in registry"): .entry-inner
-          .title {{item.name}}
+          .title
+            span: a(ng-href="{{item.repository.url}}") {{item.name}}
+            small.pull-right
+              i.fa.fa-user
+              span(ng-show="item.author") &nbsp;{{item.author}}
+              span(ng-show="!item.author") &nbsp;?
           .desc {{item.description}} / {{item.description_zh}}

@@ -1,0 +1,49 @@
+#root {
+  margin: 20px;
+}
+.entries {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.entry {
+  width: 240px;
+  min-height: 120px;
+  padding: 5px;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.entry .title small {
+  font-weight: 200;
+  font-size: 0.8em;
+  color: #777;
+}
+.entry-inner {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.entry-inner .title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.featuring {
+  width: 320px;
+  min-height: 200px;
+}
+.thumb {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  margin-bottom: 8px;
+}
+.flexend {
+  opacity: 0;
+  -webkit-flex: 100 0 auto !important;
+  flex: 100 0 auto !important;
+}

@@ -51,39 +51,10 @@ html(lang="en")
     link(rel="stylesheet",href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css")
     // custom files
     link(rel="stylesheet",type="text/css",href="index.css")
+    link(rel="stylesheet",type="text/css",href="lib/registry.css")
     script(type="text/javascript",src="lib/registry.js")
     script(type="text/javascript",src="index.js")
-  body(ng-app="awesome-g0v", ng-controller="awesome-g0v-viewer")
-    br
+  body
     #root
-      h1 G0V Projects
-      hr
-      br
-      h3 Featuring Projects
-      hr
-      .entries
-        .entry.featuring(ng-repeat="item in featuring"): .entry-inner
-          .thumb(ng-attr-style="background-image:url({{item.thumbnail}})")
-          .title 
-            span: a(ng-href="{{item.repository.url}}") {{item.name}}
-            small.pull-right
-              i.fa.fa-user
-              span &nbsp;{{item.author}}
-          .desc {{item.description}}
-        .entry.featuring.flexend
-      br
-      br
-      br
-      h3 All Projects
-      hr
-      br
-
-      .entries
-        .entry(ng-repeat="item in registry"): .entry-inner
-          .title
-            span: a(ng-href="{{item.repository.url}}") {{item.name}}
-            small.pull-right
-              i.fa.fa-user
-              span(ng-show="item.author") &nbsp;{{item.author}}
-              span(ng-show="!item.author") &nbsp;?
-          .desc {{item.description}} / {{item.description_zh}}
+      #slider
+  script(type="text/javascript",src="slider.js")

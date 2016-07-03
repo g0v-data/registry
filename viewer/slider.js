@@ -1,0 +1,1 @@
+g0vRegistry.loadInto(document.getElementById("slider"),"zh",function(t){return t.description&&t.description.length>20&&t.thumbnail});

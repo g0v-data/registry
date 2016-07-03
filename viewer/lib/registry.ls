@@ -3,9 +3,7 @@ g0vRegistry = do
     _ = -> "#it" + (if locale == \en => "" else "_#locale")
     (data) <- @load-as-json
     data = data.filter(filter)
-    console.log data.length
     root.setAttribute("class", ((root.getAttribute("class") or "") + " g0v-projects").trim!)
-    console.log data
     for item in data =>
       [node,title,thumb,desc,prj,repo] = [null,null,null,null,null,null]
       node = document.createElement \div
@@ -46,3 +44,13 @@ g0vRegistry = do
         cb ret
       ..open \get, \https://raw.githubusercontent.com/g0v-data/registry/gh-pages/registry.json
       ..send!
+
+
+angular.module \g0vRegistry, <[]>
+  ..directive \g0vprojects, -> do
+    require: <[]>
+    restrict: \A
+    scope: do
+      filter: \=ngFilter
+      locale: \=ngLocale
+    link: (s,e,a,c) -> g0vRegistry.load-into e.0, (s.locale or \zh), (s.filter or (->it))

@@ -1,4 +1,4 @@
-angular.module \awesome-g0v, <[]>
+angular.module \awesome-g0v, <[g0vRegistry]>
   ..controller \awesome-g0v-viewer, <[$scope $http]> ++ ($scope, $http) ->
     g0vRegistry.load-as-json (d) -> $scope.$apply ->
       $scope.featuring = d.filter(->it.thumbnail)

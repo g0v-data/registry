@@ -1,0 +1,1 @@
+var x$;x$=angular.module("main",["g0vRegistry"]),x$.controller("main",["$scope","$http"].concat(function(n){return n.filter=function(n){return n.thumbnail},n.locale="zh"}));

@@ -2,6 +2,7 @@ require! <[fs bluebird request fs-extra]>
 search-list = JSON.parse(fs.read-file-sync \search-result.json .toString!)
 existed = search-list.filter -> fs.exists-sync("raw/#it.json")
 search-list = search-list.filter -> !fs.exists-sync("raw/#it.json")
+missing = []
 suspicious = []
 fetched = []
 malformat = []
@@ -44,8 +45,8 @@ fetch = (list) ->
 
 
 fetch search-list .then ->
-  missing = suspicious.filter(->/^g0v(-data)?/.exec it)
-  suspicious = suspicious.filter(->!/^g0v(-data)?/.exec(it))
+  missing := suspicious.filter(->/^g0v(-data)?/.exec it)
+  suspicious := suspicious.filter(->!/^g0v(-data)?/.exec(it))
   console.log \done.
   console.log "crawler statistics: "
   console.log "existed: ", existed.length

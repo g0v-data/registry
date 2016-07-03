@@ -2,7 +2,7 @@ g0v.json rawler
 ==========
 
 phantomjs main.js
-lsc crawlerjs
+lsc crawler
 
 
 artifact

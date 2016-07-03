@@ -10,7 +10,7 @@ fs-extra.mkdirs \raw
 
 _fetch = (item) -> new bluebird (res, rej) ->
   url = "https://raw.githubusercontent.com/#item/master/g0v.json"
-  console.log url
+  console.log "fetching #item ( #url )"
   request {
     url: url
     method: \GET
@@ -40,8 +40,10 @@ _fetch = (item) -> new bluebird (res, rej) ->
 fetch = (list) ->
   if !list or !list.length => return Promise.resolve!
   id = search-list.splice 0,1 .0
-  console.log "fecth #id"
   _fetch id .then -> fetch list
+
+missing = suspicious.filter(->/^g0v(-data)?/.exec it)
+suspicious = suspicious.filter(->!/^g0v(-data)?/.exec(it))
 
 fetch search-list .then ->
   console.log \done.
@@ -49,8 +51,9 @@ fetch search-list .then ->
   console.log "existed: ", existed.length
   console.log "fetched: ", fetched.length
   console.log "malformat: ", malformat.length
+  console.log "missing:   ", missing.length
   console.log "not found: ", suspicious.length
   fs.write-file-sync \crawler-stat.json, JSON.stringify({
-    existed, fetched, malformat, suspicious
+    existed, fetched, malformat, suspicious, missing
   })
-  fs.write-file-sync \search-resut.json, JSON.stringify([])
+  fs.write-file-sync \search-result.json, JSON.stringify([])

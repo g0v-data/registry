@@ -20,8 +20,8 @@ while [ 1 ]; do
   git checkout awesome-g0v.json
   cd ..
   echo "push changes back into repo..."
-  git add registry.json viewer/registry.json
-  git add crawler/search-result.json crawler-sat.json raw
+  git add registry.json viewer/registry.json needfix.json
+  git add crawler/search-result.json crawler-stat.json crawler/raw
   git commit -m "update crawler result and registry.json"
   git push
   sleep 86400

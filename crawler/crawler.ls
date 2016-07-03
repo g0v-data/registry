@@ -42,10 +42,10 @@ fetch = (list) ->
   id = search-list.splice 0,1 .0
   _fetch id .then -> fetch list
 
-missing = suspicious.filter(->/^g0v(-data)?/.exec it)
-suspicious = suspicious.filter(->!/^g0v(-data)?/.exec(it))
 
 fetch search-list .then ->
+  missing = suspicious.filter(->/^g0v(-data)?/.exec it)
+  suspicious = suspicious.filter(->!/^g0v(-data)?/.exec(it))
   console.log \done.
   console.log "crawler statistics: "
   console.log "existed: ", existed.length

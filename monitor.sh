@@ -11,7 +11,7 @@ while [ 1 ]; do
   echo "sync and parse awesome-g0v..."
   git submodule foreach git pull
   cd awesome-g0v
-  lsc parser
+  lsc parse
   cd ..
   echo "generate registry..."
   lsc main

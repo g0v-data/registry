@@ -1,7 +1,7 @@
 {
   "author": "Kirby Wu",
-  "name": "g0vjson-crawler",
-  "description": "g0vjson-crawler",
+  "name": "g0v registry",
+  "description": "g0v registry",
   "version": "0.0.1",
   "homepage": "https://github.com/g0v-data/registry",
   "repository": {
@@ -15,6 +15,8 @@
   "dependencies": {
     "phantomjs": "=2.1.7",
     "underscore": "=1.8.3",
-    "bluebird": "=3.3.5"
+    "bluebird": "=3.3.5",
+    "request": "=2.72.0",
+    "fs-extra": "=0.30.0"
   }
 }

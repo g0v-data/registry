@@ -1,7 +1,7 @@
 {
   "author": "Kirby Wu",
-  "name": "g0vRegistry",
-  "description": "g0v registry",
+  "name": "g0vRegistryMonitor",
+  "description": "g0v registry montiro",
   "version": "0.0.1",
   "homepage": "https://github.com/g0v-data/registry",
   "repository": {
@@ -13,11 +13,7 @@
     "npm": ">=1.2.2"
   },
   "dependencies": {
-    "phantomjs": "=2.1.7",
-    "underscore": "=1.8.3",
     "bluebird": "=3.3.5",
-    "request": "=2.72.0",
-    "fs-extra": "=0.30.0",
     "gcloud": "=0.37.0",
     "ssh-exec": "=2.0.0"
   }

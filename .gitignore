@@ -1,2 +1,4 @@
 node_modules
+monitor/node_modules/
+monitor/key.json
 npm-debug.log

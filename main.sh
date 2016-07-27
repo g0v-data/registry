@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+echo "sync remote repository..."
+git pull
 echo "searching for g0v.json ..."
 cd crawler
 phantomjs main.js
@@ -23,3 +25,4 @@ git add registry.json viewer/registry.json needfix.json awesome-g0v
 git add crawler/search-result.json crawler/crawler-stat.json crawler/raw
 git commit -m "update crawler result and registry.json"
 git push
+sleep 10

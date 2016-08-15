@@ -50,13 +50,14 @@ html(lang="en")
     script(type="text/javascript",src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js")
     link(rel="stylesheet",href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css")
     // custom files
+    link(rel="stylesheet",type="text/css",href="lib/registry.css")
     link(rel="stylesheet",type="text/css",href="index.css")
     script(type="text/javascript",src="lib/registry.js")
     script(type="text/javascript",src="index.js")
   body(ng-app="awesome-g0v", ng-controller="awesome-g0v-viewer")
     br
     #root
-      div(g0vProjects)
+      div(g0vProjects,layout='default',filter='filter')
       h1 G0V Projects
       hr
       br

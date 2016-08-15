@@ -16,11 +16,13 @@ g0vRegistry = do
         title = elem \div, \name, content, (item[_("name")] or item.name)
         elem \div, 'ui divider', content
         if item.thumbnail =>
-          thumb = elem \img, 'ui image', content
-            ..setAttribute \src, item.thumbnail
-        elem \p, \description, content
+          thumb = elem \div, 'ui image', content
+            ..setAttribute \style, "width:100%;height:150px;background-image:url(#{item.thumbnail});background-size:contain;background-position:center center;background-repeat:no-repeat;"
+        elem \br, '', content, null
+        elem \br, '', content, null
         elem \p, \description, content, (item[_("description")] or item.description)
-        elem \div, \name2, null, \專案網址
+        elem \br, '', content, null
+        elem \div, \name2, content, \專案網址
         if item.homepage =>
           linkp = elem \p, \description, content
           link = elem \a, '', linkp, item.homepage

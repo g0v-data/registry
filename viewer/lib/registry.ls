@@ -64,13 +64,17 @@ g0vRegistry = do
         [title,thumb,desc,prj,repo].filter(->it).map -> node.appendChild it
         root.appendChild(node)
 
+  cache: null
   load-into: (config) ->
     {locale, layout, filter, root} = config = {locale: \zh, filter: (->it), layout: \default} <<< config
-
-    _ = -> "#it" + (if locale == \en => "" else "_#locale")
-    (data) <~ @load-as-json
-    data = data.filter(filter)
-    @layout[layout] config, data
+    if @cache => 
+      data = @cache.filter(filter)
+      @layout[layout] config, data
+    else
+      (data) <~ @load-as-json
+      @cache = data
+      data = data.filter(filter)
+      @layout[layout] config, data
 
   load-as-json: (cb) ->
     req = new XMLHttpRequest

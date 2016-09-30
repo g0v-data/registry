@@ -15,9 +15,13 @@ g0vRegistry = do
         content = elem \div, \content, node
         title = elem \div, \name, content, (item[_("name")] or item.name)
         elem \div, 'ui divider', content
-        if item.thumbnail =>
-          thumb = elem \div, 'ui image', content
-            ..setAttribute \style, "width:100%;height:150px;background-image:url(#{item.thumbnail});background-size:contain;background-position:center center;background-repeat:no-repeat;"
+        thumb = elem \div, 'ui image', content
+          ..setAttribute \style, ([
+            "width:100%;height:150px;"
+            (if item.thumbnail => "background-image:url(#{item.thumbnail});" else "")
+            "background-size:contain;background-position:center center;"
+            "background-repeat:no-repeat;"
+          ].join(""))
         elem \br, '', content, null
         elem \br, '', content, null
         elem \p, \description, content, (item[_("description")] or item.description)
@@ -66,14 +70,16 @@ g0vRegistry = do
 
   cache: null
   load-into: (config) ->
-    {locale, layout, filter, root} = config = {locale: \zh, filter: (->it), layout: \default} <<< config
+    {locale, layout, filter, root, sort} = config = {locale: \zh, filter: (->it), layout: \default} <<< config
     if @cache => 
       data = @cache.filter(filter)
+      data.sort sort
       @layout[layout] config, data
     else
       (data) <~ @load-as-json
       @cache = data
       data = data.filter(filter)
+      data.sort sort
       @layout[layout] config, data
 
   load-as-json: (cb) ->
@@ -96,10 +102,13 @@ angular.module \g0vRegistry, <[]>
       locale: \=locale
       filter: \&filter
       layout: \@layout
+      sort: \@sort
     link: (s,e,a,c) ->
       filter = s.filter!
+      sort = s.sort!
       g0vRegistry.load-into do
         root: e.0
+        sort: sort or (->0)
         locale: (s.locale or \zh)
         filter: (filter or (->it))
         layout: (s.layout or \default)
